@@ -45,18 +45,20 @@ class WinGUI(Tk):
         self.tk_label_lw4kr47j = self.__tk_label_lw4kr47j( self.tk_frame_lw4kr47h) 
         self.tk_label_frame_lw4najzn = self.__tk_label_frame_lw4najzn( self.tk_tabs_lw4bs9ys_1)
         self.tk_table_监听列表 = self.__tk_table_监听列表( self.tk_label_frame_lw4najzn) 
+        self.tk_button_复制被选中的行 = self.__tk_button_复制被选中的行( self.tk_label_frame_lw4najzn) 
+        self.tk_button_美化监听窗口 = self.__tk_button_美化监听窗口( self.tk_label_frame_lw4najzn) 
         self.tk_frame_lw4nciy3 = self.__tk_frame_lw4nciy3( self.tk_tabs_lw4bs9ys_1)
         self.tk_label_lw4ncvws = self.__tk_label_lw4ncvws( self.tk_frame_lw4nciy3) 
-        self.tk_input_lw4ne1sz = self.__tk_input_lw4ne1sz( self.tk_frame_lw4nciy3) 
+        self.tk_input_监听网址输入框 = self.__tk_input_监听网址输入框( self.tk_frame_lw4nciy3) 
         self.tk_frame_lw4nee06 = self.__tk_frame_lw4nee06( self.tk_tabs_lw4bs9ys_1)
         self.tk_label_监听类型 = self.__tk_label_监听类型( self.tk_frame_lw4nee06) 
         self.tk_select_box_监听类型选择 = self.__tk_select_box_监听类型选择( self.tk_frame_lw4nee06) 
         self.tk_frame_lw4norfy = self.__tk_frame_lw4norfy( self.tk_tabs_lw4bs9ys_1)
         self.tk_button_开始监听 = self.__tk_button_开始监听( self.tk_frame_lw4norfy) 
-        self.tk_button_lw4norg0 = self.__tk_button_lw4norg0( self.tk_frame_lw4norfy) 
+        self.tk_button_停止监听 = self.__tk_button_停止监听( self.tk_frame_lw4norfy) 
         self.tk_frame_lw4npc76 = self.__tk_frame_lw4npc76( self.tk_tabs_lw4bs9ys_1)
         self.tk_label_监听关键词 = self.__tk_label_监听关键词( self.tk_frame_lw4npc76) 
-        self.tk_input_lw4npc78 = self.__tk_input_lw4npc78( self.tk_frame_lw4npc76) 
+        self.tk_input_监听关键词 = self.__tk_input_监听关键词( self.tk_frame_lw4npc76) 
         self.tk_label_时间 = self.__tk_label_时间(self)
         self.tk_label_lw4m6rkd = self.__tk_label_lw4m6rkd(self)
     def __win(self):
@@ -112,19 +114,19 @@ class WinGUI(Tk):
         frame.add(self.tk_tabs_lw4bs9ys_1, text="数据监听")
         self.tk_tabs_lw4bs9ys_2 = self.__tk_frame_lw4bs9ys_2(frame)
         frame.add(self.tk_tabs_lw4bs9ys_2, text="关于")
-        frame.place(x=8, y=20, width=1183, height=570)
+        frame.place(x=10, y=14, width=1183, height=570)
         return frame
     def __tk_frame_lw4bs9ys_0(self,parent):
         frame = Frame(parent)
-        frame.place(x=8, y=20, width=1183, height=570)
+        frame.place(x=10, y=14, width=1183, height=570)
         return frame
     def __tk_frame_lw4bs9ys_1(self,parent):
         frame = Frame(parent)
-        frame.place(x=8, y=20, width=1183, height=570)
+        frame.place(x=10, y=14, width=1183, height=570)
         return frame
     def __tk_frame_lw4bs9ys_2(self,parent):
         frame = Frame(parent)
-        frame.place(x=8, y=20, width=1183, height=570)
+        frame.place(x=10, y=14, width=1183, height=570)
         return frame
     def __tk_label_lw4bwp1u(self,parent):
         label = Label(parent,text="骚神",anchor="center", )
@@ -258,7 +260,7 @@ class WinGUI(Tk):
         return frame
     def __tk_table_监听列表(self,parent):
         # 表头字段 表头宽度
-        columns = {"序号":37,"类型":37,"时间":111,"url":373}
+        columns = {"序号":37,"类型":67,"时间":111,"url":373}
         tk_table = Treeview(parent, show="headings", columns=list(columns),)
         for text, width in columns.items():  # 批量设置列属性
             tk_table.heading(text, text=text, anchor='center')
@@ -267,6 +269,14 @@ class WinGUI(Tk):
         tk_table.place(x=23, y=0, width=747, height=461)
         self.create_bar(parent, tk_table,True, True,23, 0, 747,461,789,523)
         return tk_table
+    def __tk_button_复制被选中的行(self,parent):
+        btn = Button(parent, text="复制被选中的行", takefocus=False,)
+        btn.place(x=40, y=471, width=112, height=30)
+        return btn
+    def __tk_button_美化监听窗口(self,parent):
+        btn = Button(parent, text="美化监听窗口", takefocus=False,)
+        btn.place(x=173, y=471, width=112, height=30)
+        return btn
     def __tk_frame_lw4nciy3(self,parent):
         frame = Frame(parent,)
         frame.place(x=11, y=22, width=314, height=42)
@@ -275,9 +285,9 @@ class WinGUI(Tk):
         label = Label(parent,text="监听网址",anchor="center", )
         label.place(x=1, y=4, width=64, height=30)
         return label
-    def __tk_input_lw4ne1sz(self,parent):
+    def __tk_input_监听网址输入框(self,parent):
         ipt = Entry(parent, )
-        ipt.place(x=75, y=4, width=233, height=30)
+        ipt.place(x=73, y=6, width=233, height=30)
         return ipt
     def __tk_frame_lw4nee06(self,parent):
         frame = Frame(parent,)
@@ -285,12 +295,12 @@ class WinGUI(Tk):
         return frame
     def __tk_label_监听类型(self,parent):
         label = Label(parent,text="监听类型",anchor="center", )
-        label.place(x=4, y=1, width=57, height=30)
+        label.place(x=4, y=8, width=57, height=30)
         return label
     def __tk_select_box_监听类型选择(self,parent):
         cb = Combobox(parent, state="readonly", )
-        cb['values'] = ("图片","视频","音频")
-        cb.place(x=75, y=6, width=150, height=30)
+        cb['values'] = ("所有","图片","视频","音频")
+        cb.place(x=79, y=8, width=150, height=30)
         return cb
     def __tk_frame_lw4norfy(self,parent):
         frame = Frame(parent,)
@@ -300,7 +310,7 @@ class WinGUI(Tk):
         btn = Button(parent, text="开始监听", takefocus=False,)
         btn.place(x=10, y=4, width=66, height=30)
         return btn
-    def __tk_button_lw4norg0(self,parent):
+    def __tk_button_停止监听(self,parent):
         btn = Button(parent, text="停止监听", takefocus=False,)
         btn.place(x=102, y=5, width=67, height=30)
         return btn
@@ -312,7 +322,7 @@ class WinGUI(Tk):
         label = Label(parent,text="关键词",anchor="center", )
         label.place(x=1, y=4, width=59, height=30)
         return label
-    def __tk_input_lw4npc78(self,parent):
+    def __tk_input_监听关键词(self,parent):
         ipt = Entry(parent, )
         ipt.place(x=75, y=4, width=233, height=30)
         return ipt
