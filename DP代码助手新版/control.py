@@ -10,6 +10,7 @@ from ui import Win
 import threading
 from tkinter import BooleanVar,StringVar,IntVar,END,font
 from tkinter.messagebox import showinfo
+from tkinter.ttk import Style
 
 from DrissionPage import ChromiumPage,ChromiumOptions
 
@@ -32,6 +33,8 @@ class Controller:
         
         # TODO 组件初始化 赋值操作
     def 配置(self):
+        # Style().configure(".", font=('宋体', 8))
+
         self.ui.tk_select_box_set_ua.current(0)
         self.ui.tk_select_box_监听类型选择.current(0)
         self.ui.tk_input_监听关键词.configure(textvariable=self.config.监听关键词)
@@ -192,15 +195,6 @@ class Config():
 
 #-导入库
 from DrissionPage import ChromiumPage,ChromiumOptions
-
-#-导入数据类型判断
-from DrissionPage.items import SessionElement
-from DrissionPage.items import ChromiumElement
-from DrissionPage.items import ShadowRoot
-from DrissionPage.items import NoneElement
-from DrissionPage.items import ChromiumTab
-from DrissionPage.items import WebPageTab
-from DrissionPage.items import ChromiumFrame
 
 #-配置类
 class Config:

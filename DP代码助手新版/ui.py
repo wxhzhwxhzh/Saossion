@@ -12,8 +12,8 @@ class WinGUI(Tk):
         super().__init__()
         self.__win()
         self.tk_tabs_lw4bs9ys = self.__tk_tabs_lw4bs9ys(self)
-        self.tk_label_lw4bwp1u = self.__tk_label_lw4bwp1u( self.tk_tabs_lw4bs9ys_2)
-        self.tk_label_lw4bx9mq = self.__tk_label_lw4bx9mq( self.tk_tabs_lw4bs9ys_2)
+        self.tk_label_lw4bwp1u = self.__tk_label_lw4bwp1u( self.tk_tabs_lw4bs9ys_6)
+        self.tk_label_lw4bx9mq = self.__tk_label_lw4bx9mq( self.tk_tabs_lw4bs9ys_6)
         self.tk_frame_lw4jm7v1 = self.__tk_frame_lw4jm7v1( self.tk_tabs_lw4bs9ys_0)
         self.tk_button_lw4jms1q = self.__tk_button_lw4jms1q( self.tk_frame_lw4jm7v1) 
         self.tk_input_浏览器选择框 = self.__tk_input_浏览器选择框( self.tk_frame_lw4jm7v1) 
@@ -59,10 +59,15 @@ class WinGUI(Tk):
         self.tk_frame_lw4npc76 = self.__tk_frame_lw4npc76( self.tk_tabs_lw4bs9ys_1)
         self.tk_label_监听关键词 = self.__tk_label_监听关键词( self.tk_frame_lw4npc76) 
         self.tk_input_监听关键词 = self.__tk_input_监听关键词( self.tk_frame_lw4npc76) 
+        self.tk_label_lwhaap6d = self.__tk_label_lwhaap6d( self.tk_tabs_lw4bs9ys_2)
+        self.tk_input_lwhaauer = self.__tk_input_lwhaauer( self.tk_tabs_lw4bs9ys_2)
+        self.tk_input_lwhab7hg = self.__tk_input_lwhab7hg( self.tk_tabs_lw4bs9ys_2)
+        self.tk_button_lwhabj8j = self.__tk_button_lwhabj8j( self.tk_tabs_lw4bs9ys_2)
+        self.tk_button_lwhacgxp = self.__tk_button_lwhacgxp( self.tk_tabs_lw4bs9ys_2)
         self.tk_label_时间 = self.__tk_label_时间(self)
         self.tk_label_lw4m6rkd = self.__tk_label_lw4m6rkd(self)
     def __win(self):
-        self.title("DP代码助手 ")
+        self.title("浏览器自动化助手 ")
         # 设置窗口大小、居中
         width = 1215
         height = 638
@@ -113,20 +118,44 @@ class WinGUI(Tk):
         self.tk_tabs_lw4bs9ys_1 = self.__tk_frame_lw4bs9ys_1(frame)
         frame.add(self.tk_tabs_lw4bs9ys_1, text="数据监听")
         self.tk_tabs_lw4bs9ys_2 = self.__tk_frame_lw4bs9ys_2(frame)
-        frame.add(self.tk_tabs_lw4bs9ys_2, text="关于")
-        frame.place(x=10, y=14, width=1183, height=570)
+        frame.add(self.tk_tabs_lw4bs9ys_2, text="元素定位")
+        self.tk_tabs_lw4bs9ys_3 = self.__tk_frame_lw4bs9ys_3(frame)
+        frame.add(self.tk_tabs_lw4bs9ys_3, text="上传/下载")
+        self.tk_tabs_lw4bs9ys_4 = self.__tk_frame_lw4bs9ys_4(frame)
+        frame.add(self.tk_tabs_lw4bs9ys_4, text="动作链")
+        self.tk_tabs_lw4bs9ys_5 = self.__tk_frame_lw4bs9ys_5(frame)
+        frame.add(self.tk_tabs_lw4bs9ys_5, text="自动等待")
+        self.tk_tabs_lw4bs9ys_6 = self.__tk_frame_lw4bs9ys_6(frame)
+        frame.add(self.tk_tabs_lw4bs9ys_6, text="关于")
+        frame.place(x=11, y=9, width=1183, height=570)
         return frame
     def __tk_frame_lw4bs9ys_0(self,parent):
         frame = Frame(parent)
-        frame.place(x=10, y=14, width=1183, height=570)
+        frame.place(x=11, y=9, width=1183, height=570)
         return frame
     def __tk_frame_lw4bs9ys_1(self,parent):
         frame = Frame(parent)
-        frame.place(x=10, y=14, width=1183, height=570)
+        frame.place(x=11, y=9, width=1183, height=570)
         return frame
     def __tk_frame_lw4bs9ys_2(self,parent):
         frame = Frame(parent)
-        frame.place(x=10, y=14, width=1183, height=570)
+        frame.place(x=11, y=9, width=1183, height=570)
+        return frame
+    def __tk_frame_lw4bs9ys_3(self,parent):
+        frame = Frame(parent)
+        frame.place(x=11, y=9, width=1183, height=570)
+        return frame
+    def __tk_frame_lw4bs9ys_4(self,parent):
+        frame = Frame(parent)
+        frame.place(x=11, y=9, width=1183, height=570)
+        return frame
+    def __tk_frame_lw4bs9ys_5(self,parent):
+        frame = Frame(parent)
+        frame.place(x=11, y=9, width=1183, height=570)
+        return frame
+    def __tk_frame_lw4bs9ys_6(self,parent):
+        frame = Frame(parent)
+        frame.place(x=11, y=9, width=1183, height=570)
         return frame
     def __tk_label_lw4bwp1u(self,parent):
         label = Label(parent,text="骚神",anchor="center", )
@@ -326,6 +355,26 @@ class WinGUI(Tk):
         ipt = Entry(parent, )
         ipt.place(x=75, y=4, width=233, height=30)
         return ipt
+    def __tk_label_lwhaap6d(self,parent):
+        label = Label(parent,text="元素原生语法",anchor="center", )
+        label.place(x=18, y=37, width=96, height=30)
+        return label
+    def __tk_input_lwhaauer(self,parent):
+        ipt = Entry(parent, )
+        ipt.place(x=124, y=37, width=194, height=30)
+        return ipt
+    def __tk_input_lwhab7hg(self,parent):
+        ipt = Entry(parent, )
+        ipt.place(x=431, y=37, width=150, height=30)
+        return ipt
+    def __tk_button_lwhabj8j(self,parent):
+        btn = Button(parent, text="开始转换-&gt;", takefocus=False,)
+        btn.place(x=329, y=37, width=79, height=30)
+        return btn
+    def __tk_button_lwhacgxp(self,parent):
+        btn = Button(parent, text="复制转换后的语法", takefocus=False,)
+        btn.place(x=609, y=37, width=116, height=30)
+        return btn
     def __tk_label_时间(self,parent):
         label = Label(parent,text="时间更新",anchor="center", )
         label.place(x=931, y=599, width=255, height=30)
@@ -345,6 +394,7 @@ class Win(WinGUI):
         self.tk_label_时间.bind('<Button-1>',self.ctl.updateTime)
         pass
     def __style_config(self):
+        
         pass
 if __name__ == "__main__":
     win = WinGUI()
